@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6a98cd09e1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/index.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="sidemenu" class="menu-collapsed">
+        <div class="header">
+            <div class="titulo">Cristian MMR</div>
+             <div class="menu">
+                <img class="menu-color" src="/assets/menu.svg" alt="">
+             </div>
+        </div>   
+        
+        <div class="perfil">
+            <div class="foto">
+                <img src="/assets/mark.jpg" alt="">
+            </div>
+            <p class="nombre">Marcos Rivas</p>
+        </div>
+
+        <div class="menu-items">
+
+            <div class="item">
+                <a href="#">
+                    <div class="menu-icon ancho-icon">
+                        <img src="/assets/nube.svg" alt="">
+                    </div>
+                    <div class="sub-titulo">Cloud Services</div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <div class="menu-icon ancho-icon color-disco">
+                        <img src="/assets/disco.svg" alt="">
+                    </div>
+                    <div class="sub-titulo">Disk</div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <div class="menu-icon ancho-icon">
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/thunder-2323261-2098667.png" alt="">
+                    </div>
+                    <div class="sub-titulo">Function Apps</div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="#">
+                    <div class="menu-icon ancho-icon color-aplicaciones">
+                        <img src="/assets/aplicaciones.svg" alt="">
+                    </div>
+                    <div class="sub-titulo">Mesh Aplications</div>
+                </a>
+            </div>
+            <div class="footer">
+                <div class="item">
+                    <a href="#">
+                        <div class="menu-icon ancho-icon">
+                            <img src="/assets/facebook.svg" alt="">
+                        </div>
+                        <div class="sub-titulo">Facebook</div>
+                    </a>
+                </div>
+    
+                <div class="item">
+                    <a href="#">
+                        <div class="menu-icon ancho-icon color-disco">
+                            <img src="/assets/twitter.svg" alt="">
+                        </div>
+                        <div class="sub-titulo">Twitter</div>
+                    </a>
+                </div>
+    
+                <div class="item">
+                    <a href="#">
+                        <div class="menu-icon ancho-icon">
+                            <img src="/assets/youtube.svg" alt="">
+                        </div>
+                        <div class="sub-titulo">Youtube</div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            const menu = document.querySelector(".menu")
+            const grande = document.querySelector("#sidemenu")
+            const foto = document.querySelector(".foto")
+            const nombre = document.querySelector(".nombre")
+            const titulo = document.querySelector(".titulo")
+            
+            menu.addEventListener("click",()=>{
+
+                console.log(titulo);
+                if(!grande.classList.contains("ancho-reducido")){
+
+                    grande.classList.add("ancho-reducido")
+                    foto.classList.add("foto-100")
+                    nombre.classList.add("no-nombre")
+                    titulo.classList.add("no-titulo")
+
+                }else{
+                    grande.classList.remove("ancho-reducido")
+                    foto.classList.remove("foto-100")
+                    nombre.classList.remove("no-nombre")
+                    titulo.classList.remove("no-titulo")
+                }
+            })
+            
+        </script>
+        
+
+    </div>
+</body>
+
+</html>
